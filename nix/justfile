@@ -1,0 +1,27 @@
+set shell := ["zsh", "-c"]
+
+_default:
+    @just -l
+
+# List all generations
+gens:
+    @echo "Listing home-manager generations"
+    @nix-env --list-generations
+
+# Cleans up garbage
+clean:
+    @echo "Cleaning up unused Nix store items"
+    @nix-collect-garbage -d
+
+# Update flake git revision
+flake-update:
+    @echo "Syncing latest git rev"
+    @nix flake update
+
+# Rebuild configuration
+[macos]
+rebuild:
+    @echo "Rebuilding macOS configuration"
+    @nix run nix-darwin -- switch --flake .#doyeon
+
+
