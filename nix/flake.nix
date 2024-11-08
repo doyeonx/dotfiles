@@ -28,14 +28,14 @@
       "doyeon" = nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = [
-          ./modules/darwin
+          ./modules/darwin/default.nix
           home-manager.darwinModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "backup";
-              # users.doyeon.imports = [./module/home-manager];
+              users.doyeon.imports = [./modules/home-manager/default.nix];
             };
           }
           nix-homebrew.darwinModules.nix-homebrew
