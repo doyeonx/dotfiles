@@ -10,12 +10,15 @@
     tor
     just
     btop
+    bat
+    yazi
+    zoxide
+    fzf
   ];
 
   brewcasks = [
     "wezterm"
     "notion"
-    "notion-calendar"
     "zen-browser"
     "raycast"
     "tor-browser"
@@ -23,9 +26,8 @@
   ];
 
   brewapps = {
-    "Encrypto" = 935235287;
-    "KakaoTalk" = 869223134;
-    "Mozilla VPN" = 1489407738;
+    "Fantastical" = 975937182;
+    "DaVinci Resolve" = 571213070;
   };
 
   fontpkgs = with pkgs; [

@@ -1,5 +1,11 @@
 set shell := ["zsh", "-c"]
 
+alias g := gens
+alias c := clean
+alias r := rebuild
+alias d := debug
+alias u := flake-update
+
 _default:
     @just -l
 
@@ -22,6 +28,10 @@ flake-update:
 [macos]
 rebuild:
     @echo "Rebuilding macOS configuration"
-    @nix run nix-darwin -- switch --flake .#doyeon
+    @nix build .#darwinConfigurations.doyeon.system
 
-
+# Debug 
+[macos]
+debug:
+    @echo "Debugging macOS configuration with --show-trace"
+    @nix build .#darwinConfigurations.doyeon.system --show-trace

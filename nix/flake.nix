@@ -1,5 +1,5 @@
 {
-  description = "doyeon's macos config";
+  description = "doyeon's mac config";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
@@ -15,8 +15,6 @@
     };
 
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
-
-    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs = {
@@ -24,7 +22,6 @@
     nix-darwin,
     home-manager,
     nix-homebrew,
-    catppuccin,
     ...
   }: {
     darwinConfigurations = {
@@ -39,8 +36,7 @@
               useUserPackages = true;
               backupFileExtension = "backup";
               users.doyeon.imports = [
-                ./modules/home-manager/default
-                catppuccin.homeManagerModules.catppuccin
+                # ./modules/home-manager
               ];
             };
           }

@@ -1,7 +1,6 @@
-{...}: {
-  programs.fzf = {
+_: {
+  programs.bat = {
     enable = true;
-    enableZshIntegration = true;
 
     catppuccin = {
       enable = true;

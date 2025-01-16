@@ -13,7 +13,10 @@
     # };
 
     packages = with pkgs; [
-      cmatrix
+      bat
+      fzf
+      yazi
+      zoxide
     ];
   };
 
