@@ -1,3 +1,5 @@
-# ....... for my Mac
+# Dotfiles 
 
-Made reproducible and declarative through Nix-darwin
+terminal: ghostty
+theme: Kanagawa Dragon
+font: JetBrainsMono Nerd Font
