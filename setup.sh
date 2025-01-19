@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
 # xcode
 xcode-select --install
 
 # rosetta
 softwareupdate --install-rosetta
+
+# install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # brew packages
 brew install git stow tree starship gh neovim btop bat tmux ripgrep pip3
