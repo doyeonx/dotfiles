@@ -3,8 +3,6 @@ local o = vim.o
 local opt = vim.opt
 local fn = vim.fn
 
-vim.g.mapleader = ' '
-
 o.termguicolors = true
 o.encoding = "utf-8"
 o.history = 1000                 -- remember more commands and search history
