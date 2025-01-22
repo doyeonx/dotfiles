@@ -26,6 +26,7 @@ cat > config << EOL
   IdentityFile ~/.ssh/github_key
 EOL
 ssh-add --apple-use-keychain ~/.ssh/github_key
+git clone git@github.com:doyeonx/dotfiles.git
 
 # sync dotfiles
 cd ~/dotfiles

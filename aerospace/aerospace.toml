@@ -49,7 +49,15 @@ if.app-name-regex-substring = 'finder'
 run = 'layout floating'
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'Music'
+run = 'layout floating'
+
+[[on-window-detected]]
 if.app-name-regex-substring = 'Photos'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Messages'
 run = 'layout floating'
 
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
