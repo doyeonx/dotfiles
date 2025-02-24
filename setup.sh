@@ -9,10 +9,15 @@ softwareupdate --install-rosetta
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # brew packages
-brew install git stow tree starship gh neovim btop bat tmux ripgrep lazygit fzf fish eza python3 
+brew install git stow tree starship gh neovim btop bat tmux ripgrep lazygit fzf eza python3 
 
 # brew applications
 brew install --cask ghostty wireshark raycast docker ollama nikitabobko/tap/aerospace
+
+# oh-my-zsh plugins
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # setup github ssh
 mkdir ~/.ssh && cd ~/.ssh
@@ -31,8 +36,3 @@ git clone git@github.com:doyeonx/dotfiles.git
 # sync dotfiles
 cd ~/dotfiles
 stow .
-
-# set default shell to fish
-curl -L https://get.oh-my.fish | fish
-sudo bash -c 'echo $(which fish) >> /etc/shells'
-chsh -s $(which fish)
