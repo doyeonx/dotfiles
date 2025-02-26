@@ -58,6 +58,12 @@ require("lazy").setup({
         opts = {},
         dependencies = { { "echasnovski/mini.icons", opts = {} } },
         lazy = false,
+        view_options = {
+            show_hidden = true,
+            is_hidden_file = function(name, bufnr)
+                return vim.startswith(name, '.')
+            end,
+        },
     },
     {
         'stevearc/dressing.nvim',

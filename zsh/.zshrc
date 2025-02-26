@@ -14,4 +14,13 @@ source $ZSH/oh-my-zsh.sh
 
 PATH=~/.console-ninja/.bin:$PATH
 
+export BAT_THEME="base16"
+
 eval "$(starship init zsh)"
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+
+# Eza
+alias l="eza -l --icons --git -a"
+alias lt="eza --tree --level=2 --long --icons --git"
+alias ltree="eza --tree --level=2  --icons --git"
+
