@@ -1,0 +1,2 @@
+require("heirline").setup({
+})

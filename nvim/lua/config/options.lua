@@ -11,7 +11,7 @@ o.title = true                   -- change the terminal's title
 o.backup = false                 -- no backup file
 o.swapfile = false               -- don't write .swp files
 o.undofile = true                -- default `undodir = ~/.local/share/nvim/undo/`
-o.wrap = true                   -- don't wrap lines
+o.wrap = false                   -- don't wrap lines
 o.tabstop = 4                    -- a tab is four spaces
 o.shiftwidth = o.tabstop         -- number of spaces to use for autoindenting
 o.shiftround = true              -- use multiple of shiftwidth when indenting with '<' and '>'
